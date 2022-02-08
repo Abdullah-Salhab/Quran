@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html  >
+<head>
+    <meta charset="UTF-8">
+
+    <title>Quran_search</title>
+
+    <link rel="stylesheet" href="Style_page.css">
+
+    <script src="main.js"></script>
+
+</head>
+
+<body>
+
+    <!--- This part for thr search in the page ------------------------->
+
+    <div id="search">
+
+       <h1 id="h1"> الباحث في القران </h1>
+
+       <button  id="button" onclick="search()"> ابحث</button>
+
+       <input type="text" id="quree" placeholder="قم بإدخال رقم الصفحة ">
+
+    </div>
+
+    <!--- This part for the buttons and for images quran ------------------------->
+
+    <div id="all">
+
+        <div id="images" >
+            <img id="image" src="images/0001.jpg" alt="img">
+        </div>
+
+        <button  id="next" onclick="next()"> الصفحة التالية &gt;&gt;</button>
+
+        <button  id="prev" onclick="prev()">&lt;&lt; الصفحة السابقة </button>
+
+        <button  id="show" onclick="show_search()"> البحث عن صفحة معينة </button>
+
+        <button id="show_range" onclick="show_brightnes_range()"> تغيير مقدار سطوع الشاشة</button>
+
+        <button  id="change_color" onclick="change_color()">تغيير الألوان </button> 
+
+    </div>
+
+    <!--- This part for fuhras in the page ---------------------->
+
+    <div id="fuhras">
+
+        <div id="fuhras_top">
+
+            <label id="open_fuhras"  onclick="open_fuhras()">الفهرس </label>
+
+            <label id="close_fuhras" onclick="close_fuhras()" >&times;</label>
+
+        </div>
+
+        <div id="fuhras_content">
+
+           <table>
+
+               <thead>
+                  <tr>
+                      <th style="background-color:rgb(75, 75, 75);">اسم السورة </th>
+                  </tr>
+               </thead>
+               
+               <tbody>
+                   <tr><th onclick="get_page_image(1)">الفاتحة    </th></tr>
+                   <tr><th onclick="get_page_image(2)">البقرة     </th></tr>
+                   <tr><th onclick="get_page_image(50)">آل عمران  </th></tr>
+                   <tr><th onclick="get_page_image(77)">النساء    </th></tr>
+                   <tr><th onclick="get_page_image(106)">المائدة  </th></tr>
+                   <tr><th onclick="get_page_image(128)">الأنعام   </th></tr>
+                   <tr><th onclick="get_page_image(151)">الأعراف   </th></tr>
+                   <tr><th onclick="get_page_image(177)">الأنفال   </th></tr>
+                   <tr><th onclick="get_page_image(187)">التوبة   </th></tr>
+                   <tr><th onclick="get_page_image(208)">يونس     </th></tr>
+                   <tr><th onclick="get_page_image(221)">هود      </th></tr>
+                   <tr><th onclick="get_page_image(235)">يوسف     </th></tr>
+                   <tr><th onclick="get_page_image(249)">الرعد    </th></tr>
+                   <tr><th onclick="get_page_image(255)">ابراهيم  </th></tr>
+                   <tr><th onclick="get_page_image(262)">الحجر    </th></tr>
+                   <tr><th onclick="get_page_image(267)">النحل    </th></tr>
+                   <tr><th onclick="get_page_image(282)">الإسراء   </th></tr>
+                   <tr><th onclick="get_page_image(293)">الكهف    </th></tr>
+                   <tr><th onclick="get_page_image(305)"> مريم    </th></tr>
+                   <tr><th onclick="get_page_image(312)"> طه      </th></tr>
+                   <tr><th onclick="get_page_image(322)">الأنبياء  </th></tr>
+                   <tr><th onclick="get_page_image(332)"> الحج    </th></tr>
+                   <tr><th onclick="get_page_image(342)"> المؤمنون</th></tr>
+                   <tr><th onclick="get_page_image(350)"> النور   </th></tr>
+                   <tr><th onclick="get_page_image(359)"> الفرقان </th></tr>
+                   <tr><th onclick="get_page_image(367)"> الشعراء </th></tr>
+                   <tr><th onclick="get_page_image(377)">النمل    </th></tr>
+                   <tr><th onclick="get_page_image(385)"> القصص   </th></tr>
+                   <tr><th onclick="get_page_image(396)"> العنكبوت</th></tr>
+                   <tr><th onclick="get_page_image(404)"> الروم   </th></tr>
+                   <tr><th onclick="get_page_image(411)"> لقمان   </th></tr>
+                   <tr><th onclick="get_page_image(415)"> السجدة  </th></tr>
+                   <tr><th onclick="get_page_image(418)"> الأحزاب  </th></tr>
+                   <tr><th onclick="get_page_image(428)"> سبأ     </th></tr>
+                   <tr><th onclick="get_page_image(434)"> فاطر    </th></tr>
+                   <tr><th onclick="get_page_image(440)"> يس      </th></tr>
+                   <tr><th onclick="get_page_image(446)"> الصافات</th></tr>
+                   <tr><th onclick="get_page_image(453)"> ص      </th></tr>
+                   <tr><th onclick="get_page_image(458)"> الزمر  </th></tr>
+                   <tr><th onclick="get_page_image(467)"> غافر   </th></tr>
+                   <tr><th onclick="get_page_image(477)">فصلت    </th></tr>
+                   <tr><th onclick="get_page_image(483)"> الشورى </th></tr>
+                   <tr><th onclick="get_page_image(489)"> الزخرف </th></tr>
+                   <tr><th onclick="get_page_image(496)"> الدخان </th></tr>
+                   <tr><th onclick="get_page_image(499)"> الجاثية</th></tr>
+                   <tr><th onclick="get_page_image(502)"> الأحقاف </th></tr>
+                   <tr><th onclick="get_page_image(507)">محمد    </th></tr>
+                   <tr><th onclick="get_page_image(511)"> الفتح  </th></tr>
+                   <tr><th onclick="get_page_image(515)"> الحجرات</th></tr>
+                   <tr><th onclick="get_page_image(518)"> ق      </th></tr>
+                   <tr><th onclick="get_page_image(520)">الذاريات</th></tr>
+                   <tr><th onclick="get_page_image(523)"> الطور</th></tr>
+                   <tr><th onclick="get_page_image(526)"> النجم</th></tr>
+                   <tr><th onclick="get_page_image(528)"> القمر</th></tr>
+                   <tr><th onclick="get_page_image(531)"> الرحمن</th></tr>
+                   <tr><th onclick="get_page_image(534)"> الواقعة</th></tr>
+                   <tr><th onclick="get_page_image(537)"> الحديد</th></tr>
+                   <tr><th onclick="get_page_image(542)">المجادلة </th></tr>
+                   <tr><th onclick="get_page_image(545)"> الحشر</th></tr>
+                   <tr><th onclick="get_page_image(549)"> الممتحنة</th></tr>
+                   <tr><th onclick="get_page_image(551)"> الصف</th></tr>
+                   <tr><th onclick="get_page_image(553)"> الجمعة</th></tr>
+                   <tr><th onclick="get_page_image(554)"> المنافقون</th></tr>
+                   <tr><th onclick="get_page_image(556)"> التغابن</th></tr>
+                   <tr><th onclick="get_page_image(558)"> الطلاق</th></tr>
+                   <tr><th onclick="get_page_image(560)"> التحريم</th></tr>
+                   <tr><th onclick="get_page_image(562)"> الملك</th></tr>
+                   <tr><th onclick="get_page_image(564)"> القلم</th></tr>
+                   <tr><th onclick="get_page_image(566)"> الحاقة</th></tr>
+                   <tr><th onclick="get_page_image(568)"> المعارج</th></tr>
+                   <tr><th onclick="get_page_image(570)"> نوح</th></tr>
+                   <tr><th onclick="get_page_image(572)"> الجن</th></tr>
+                   <tr><th onclick="get_page_image(574)"> المزمل</th></tr>
+                   <tr><th onclick="get_page_image(575)"> المدثر</th></tr>
+                   <tr><th onclick="get_page_image(577)"> القيامة</th></tr>
+                   <tr><th onclick="get_page_image(578)"> الإنسان</th></tr>
+                   <tr><th onclick="get_page_image(580)"> المرسلات</th></tr>
+                   <tr><th onclick="get_page_image(582)"> النبأ</th></tr>
+                   <tr><th onclick="get_page_image(583)"> النازعات</th></tr>
+                   <tr><th onclick="get_page_image(585)"> عبس</th></tr>
+                   <tr><th onclick="get_page_image(586)"> التكوير</th></tr>
+                   <tr><th onclick="get_page_image(587)"> الإنفطار</th></tr>
+                   <tr><th onclick="get_page_image(587)"> المطففين</th></tr>
+                   <tr><th onclick="get_page_image(589)"> الإنشقاق</th></tr>
+                   <tr><th onclick="get_page_image(590)"> البروج</th></tr>
+                   <tr><th onclick="get_page_image(591)"> الطارق</th></tr>
+                   <tr><th onclick="get_page_image(591)"> الأعلى</th></tr>
+                   <tr><th onclick="get_page_image(592)"> الغاشية</th></tr>
+                   <tr><th onclick="get_page_image(593)"> الفجر</th></tr>
+                   <tr><th onclick="get_page_image(594)"> البلد</th></tr>
+                   <tr><th onclick="get_page_image(595)"> الشمس</th></tr>
+                   <tr><th onclick="get_page_image(595)"> الليل</th></tr>
+                   <tr><th onclick="get_page_image(596)"> الضحى</th></tr>
+                   <tr><th onclick="get_page_image(596)"> الشرح</th></tr>
+                   <tr><th onclick="get_page_image(597)"> التين</th></tr>
+                   <tr><th onclick="get_page_image(597)"> العلق</th></tr>
+                   <tr><th onclick="get_page_image(598)"> القدر</th></tr>
+                   <tr><th onclick="get_page_image(598)"> البينة</th></tr>
+                   <tr><th onclick="get_page_image(599)"> الزلزلة</th></tr>
+                   <tr><th onclick="get_page_image(599)"> العاديات</th></tr>
+                   <tr><th onclick="get_page_image(600)"> القارعة</th></tr>
+                   <tr><th onclick="get_page_image(600)"> التكاثر</th></tr>
+                   <tr><th onclick="get_page_image(601)"> العصر</th></tr>
+                   <tr><th onclick="get_page_image(601)"> الهمزة</th></tr>
+                   <tr><th onclick="get_page_image(601)"> الفيل</th></tr>
+                   <tr><th onclick="get_page_image(602)"> قريش</th></tr>
+                   <tr><th onclick="get_page_image(602)"> الماعون</th></tr>
+                   <tr><th onclick="get_page_image(602)"> الكوثر</th></tr>
+                   <tr><th onclick="get_page_image(603)"> الكافرون</th></tr>
+                   <tr><th onclick="get_page_image(603)"> النصر</th></tr>
+                   <tr><th onclick="get_page_image(603)"> المسد</th></tr>
+                   <tr><th onclick="get_page_image(604)"> الإخلاص</th></tr>
+                   <tr><th onclick="get_page_image(604)"> الفلق</th></tr>
+                   <tr><th onclick="get_page_image(604)"> الناس</th></tr>
+               </tbody> 
+
+           </table>
+
+        </div>
+
+    </div>
+
+    <!--- This part for Brightnees in the page ------------------------>
+
+    <div id="brightnes_range">
+
+    <label id="result">4</label>
+
+    <label> : مقدار السطوع </label>
+
+    <label id="close_brightnes" onclick="close_brightnes()" >&times;</label><br><br>
+
+    <input type="range" id="rangebright" value="250" min="100" max="600">
+
+    </div>
+    
+    <div id="brightnes"></div>
+
+    <script>
+
+        document.getElementById("rangebright").addEventListener('input', changebright);
+
+    </script>
+    
+</body>
+<!--  
+    TO DO THIS page it's take about 25 hours in three to four  days and maybe Week 
+    
+    The Programmer is : Abullah Salhab  5-6/2020
+
+    -------->
+</html>
